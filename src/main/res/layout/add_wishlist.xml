@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_my_wishlist"
+        android:textColor="@color/black_pd"
+        android:textSize="@dimen/sp18"
+        android:padding="@dimen/dp15"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+        <LinearLayout
+            android:id="@+id/createnew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp15">
+
+            <RelativeLayout
+                android:id="@+id/addditem"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/yellow_circle_drawable"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/dp12"
+                    android:layout_height="@dimen/dp12"
+                    android:src="@drawable/plus"
+                    android:tint="@android:color/black" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/crtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="@string/create_new"
+                android:textColor="@color/black_pd"
+                android:textSize="@dimen/sp13"
+                android:singleLine="true"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/wishlistname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:hint="Wishlist Name"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/wishlist"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200"
+            android:layout_margin="@dimen/dp15"
+            android:divider="@null"
+            android:scrollbars="none"></ListView>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/fade_black"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"/>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/publish_background_drawable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textSize="@dimen/sp15"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+           <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:gravity="center">
+
+               <LinearLayout
+                   android:id="@+id/add"
+                   android:layout_width="@dimen/dp150"
+                   android:layout_height="@dimen/dp45"
+                   android:orientation="horizontal"
+                   android:gravity="center"
+                   android:background="@drawable/add_custom_button">
+
+                   <TextView
+                       android:id="@+id/addtextbtn"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/add"
+                       android:textSize="@dimen/sp15"
+                       android:layout_marginLeft="@dimen/dp5"
+                       android:textColor="@android:color/white"/>
+
+               </LinearLayout>
+
+           </RelativeLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

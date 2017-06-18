@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/grey_dividr"
+    android:paddingBottom="@dimen/dp2"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/dp5"
+    android:layout_marginBottom="@dimen/dp3"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp5"
+        card_view:cardCornerRadius="@dimen/dp2"
+        android:id="@+id/list_crd">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<RelativeLayout
+    android:id="@+id/prdimg"
+    android:layout_width="@dimen/dp100"
+    android:layout_height="@dimen/dp100"
+    android:gravity="center"
+    android:layout_marginLeft="@dimen/dp10"
+    >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/product_img"
+                android:scaleType="centerCrop"
+                android:layout_margin="@dimen/dp5"
+                android:layout_gravity="center"
+                android:src="@drawable/image1"/>
+    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_toRightOf="@+id/prdimg"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/product_name"
+                    android:singleLine="true"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/dp15"
+                    android:text="-"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:id="@+id/price"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/dp15"
+                    android:text="$ 00.00"/>
+                <LinearLayout
+                    android:id="@+id/off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cross_price"
+                        android:textColor="@color/black_pd"
+                        android:textSize="@dimen/dp10"
+                        android:text="$ 00.00"/>
+
+                    <TextView
+                        android:id="@+id/offdiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dp10"
+                        android:text="0% off"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rateview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RatingBar
+                    android:id="@+id/rate"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/off"
+                    android:progressDrawable="@drawable/rating_custom"
+                    android:rating="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ratingcount"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_hint"
+                    android:textSize="@dimen/dp10"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="(0)"/>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/specialoffer"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:background="@drawable/ribbon">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp10"
+                    android:text="Special Offer"/>
+            </RelativeLayout>
+
+            <ToggleButton
+                android:id="@+id/wish"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:layout_margin="@dimen/dp8"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:background="@drawable/like"
+                android:textOff=""
+                android:textOn=""/>
+
+        </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp5"
+                android:gravity="center_vertical"
+                android:background="@color/black_grey"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/productlike"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:id="@+id/clicklike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/wishlike"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:src="@drawable/unlike"/>
+                    <TextView
+                        android:id="@+id/likecount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:textSize="@dimen/dp15"
+                        android:textColor="@color/fade_black"
+                        android:text="0"
+                        android:layout_toRightOf="@+id/wishlike"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/productcomment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:src="@drawable/comment"/>
+                    <TextView
+                        android:id="@+id/commentcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:textSize="@dimen/dp15"
+                        android:textColor="@color/fade_black"
+                        android:text="0"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_weight=".1"
+                    android:src="@drawable/share"
+                    android:id="@+id/productshare" />
+
+                <ImageView
+                    android:id="@+id/addto"
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_weight=".1"
+                    android:src="@drawable/add_collection"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

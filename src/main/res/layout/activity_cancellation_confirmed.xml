@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment_success_failed"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.shop.shopaves.Activity.PaymentSuccessFailed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp150"
+                android:id="@+id/img"
+                android:layout_centerInParent="true"
+                android:src="@drawable/canceled"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:id="@+id/pay"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img"
+                android:textColor="@color/white"
+                android:text="@string/cancelconfirm"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pay"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/your_order_has_been_cancelled"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/continueshop"
+                android:layout_width="@dimen/dp250"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/orange_bttn"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/dp25"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/continueshop"
+                android:textSize="@dimen/sp13"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/save"
+                android:textColor="@color/fade_black"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:text="@string/you_will_receive_the_refund_nin_8_days"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

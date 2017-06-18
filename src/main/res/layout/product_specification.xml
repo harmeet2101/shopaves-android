@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:padding="@dimen/dp5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="@dimen/dp20"
+            android:paddingBottom="@dimen/dp20">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_pd"
+                android:textSize="@dimen/sp13"
+                android:id="@+id/addtitle"
+                android:paddingLeft="@dimen/dp10"
+                android:layout_centerVertical="true"
+                android:hint="title"/>
+
+
+            <TextView
+                android:id="@+id/di"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    -"
+                android:layout_toRightOf="@+id/addtitle"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+
+            <TextView
+                android:id="@+id/addvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/di"
+                android:textColor="@color/fade_black"
+                android:textSize="@dimen/sp13"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_toLeftOf="@+id/removeview"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_centerVertical="true"
+                android:hint=""/>
+
+            <ImageView
+                android:id="@+id/removeview"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:src="@drawable/drop_right"
+                android:padding="@dimen/dp5"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

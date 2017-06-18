@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_location"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/grey_dividr"
+    tools:context=".Activity.SelectItemActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/addpro_hdr"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:background="@color/colorPrimary"
+            android:paddingRight="@dimen/dp10">
+
+            <ImageView
+                android:id="@+id/back_addrs"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp5"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/back_arrow" />
+
+            <TextView
+                android:id="@+id/content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="CONDITION"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp5"
+                android:visibility="visible"
+                android:text="SELECT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/cart"
+                android:layout_marginRight="25dp"
+                android:visibility="gone"
+                android:padding="@dimen/dp5"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/cart"
+                android:layout_toRightOf="@+id/wishopen"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp8"
+                android:id="@+id/wishopen"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/content_title"
+                android:src="@drawable/wishlist_white"/>
+
+
+
+
+            <!-- <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/dp2"
+                 android:layout_alignParentRight="true"
+                 android:src="@drawable/red_cart_indicator"/>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp35"
+            android:layout_below="@+id/addpro_hdr"
+            android:id="@+id/search_catgries"
+            android:visibility="gone"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/white_back"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15">
+            <ImageView
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_centerVertical="true"
+                android:id="@+id/search"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/search"
+                android:layout_alignParentRight="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="text"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="@color/text_hint"
+                android:textColor="@color/fade_black"
+                android:paddingRight="@dimen/dp10"
+                android:textSize="@dimen/dp15"
+                android:hint="Search"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_toLeftOf="@+id/search"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_margin="@dimen/dp8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/itemlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:scrollbars="none"
+                android:divider="@null"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:paddingTop="@dimen/dp20"
+                android:paddingBottom="20dp">
+
+            </ListView>
+
+
+            <RelativeLayout
+                android:id="@+id/addcustom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/itemname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dp25"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/black_pd"
+                    android:text="Enter your own"/>
+
+                <ImageView
+                    android:id="@+id/ic"
+                    android:layout_width="@dimen/dp25"
+                    android:layout_height="@dimen/dp25"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/unchecked"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

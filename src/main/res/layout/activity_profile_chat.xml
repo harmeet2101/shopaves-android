@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/profilechat"
+    android:layout_height="match_parent"
+    tools:context="com.shop.shopaves.Activity.ProfileChatActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:paddingRight="@dimen/dp10"
+        android:id="@+id/addpro_hdr"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_addrs"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/white"
+            android:text=""/>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_margin="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:padding="@dimen/dp10"
+        android:divider="@android:color/transparent"
+        android:background="#f7fafd"
+        android:dividerHeight="15dp"
+        android:layout_below="@+id/addpro_hdr"
+        android:layout_above="@+id/writecommentview"
+        android:layout_marginBottom="@dimen/dp5"
+        android:id="@+id/listView" />
+
+    <RelativeLayout
+        android:id="@+id/writecommentview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:paddingRight="@dimen/dp15"
+        android:paddingLeft="@dimen/dp15">
+
+        <EditText
+            android:id="@+id/editcomment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/actionsend"
+            android:background="@android:color/white"
+            android:hint="@string/type_something"
+            android:textSize="@dimen/sp13"/>
+
+        <ImageView
+            android:id="@+id/actionsend"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:src="@drawable/send"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

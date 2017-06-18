@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F3F7"
+    tools:context="com.shop.shopaves.Fragments.Stores">
+    <!--header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/dp5"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:textSize="@dimen/dp17"
+            android:textColor="@color/white"
+            android:text="Select Your Stores"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/fade_white"
+            android:text="Choose at least 3 options to continue"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp10"
+        android:numColumns="3"
+        android:gravity="center"
+        android:verticalSpacing="@dimen/dp10"
+        android:horizontalSpacing="@dimen/dp10"
+        android:id="@+id/stores_gridview">
+
+    </GridView>
+</LinearLayout>

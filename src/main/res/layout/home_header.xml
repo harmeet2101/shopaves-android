@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:paddingTop="@dimen/dp7"
+        android:paddingBottom="@dimen/dp7"
+        android:paddingRight="@dimen/dp12"
+        android:layout_centerVertical="true"
+        android:id="@+id/menu"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/menu"/>
+    <RelativeLayout
+        android:id="@+id/homeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/menu"
+        android:visibility="visible"
+        >
+    <ImageView
+        android:id="@+id/logoicon"
+        android:layout_width="@dimen/dp150"
+        android:layout_height="@dimen/dp45"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:src="@drawable/logo_home"/>
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/cart"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/cart"
+            android:id="@+id/imageView" />
+
+       <!-- <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/red_cart_indicator"/>-->
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/wishopen"
+        android:layout_centerVertical="true"
+       android:layout_toLeftOf="@+id/cart"
+        android:src="@drawable/wishlist_white"/>
+    </RelativeLayout>
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Title"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/sp15"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:visibility="gone"/>
+
+
+    <ImageView
+
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_centerVertical="true"
+        android:id="@+id/itemclick"
+        android:padding="@dimen/dp8"
+        android:layout_alignParentRight="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cartnotimg"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:id="@+id/no_item"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"/>
+
+</RelativeLayout>

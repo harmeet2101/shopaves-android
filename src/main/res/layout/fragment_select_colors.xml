@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectcolorview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.shop.shopaves.Fragments.SelectColors">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:textSize="@dimen/dp13"
+        android:textColor="@color/txt_light_white"
+        android:text="This information will help us to know colors \nyou like and help us to suggest you products"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <cn.lankton.flowlayout.FlowLayout
+            android:id="@+id/colr_flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp11">
+        </cn.lankton.flowlayout.FlowLayout>
+
+    </ScrollView>
+
+</LinearLayout>

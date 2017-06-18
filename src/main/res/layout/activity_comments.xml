@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/commentlayout"
+    tools:context="com.shop.shopaves.Activity.CommentsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:paddingRight="@dimen/dp10"
+        android:id="@+id/addpro_hdr"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_addrs"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/white"
+            android:text="@string/comments"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commentslist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/writecommentview"
+        android:layout_below="@+id/addpro_hdr"
+        android:background="#d4dae7"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/writecommentview"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingRight="@dimen/dp15"
+        android:paddingLeft="@dimen/dp15"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/editcomment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/actionsend"
+            android:background="@android:color/transparent"
+            android:hint="@string/write_a_comment"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:id="@+id/actionsend"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:src="@drawable/send"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

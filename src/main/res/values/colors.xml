@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0a84fd</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="yellow">#ffe400</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_blue">#46A3FF</color>
+    <color name="light_txt">#607399</color>
+    <color name="orange">#FD8504</color>
+    <color name="txt_hint">#C0C5DB</color>
+    <color name="txt_light_white">#A5C7FE</color>
+    <color name="purple">#B259F1</color>
+    <color name="voilet">#7259F1</color>
+    <color name="sky_blue">#54CCFE</color>
+    <color name="btnbg">#FF8700</color>
+    <color name="blue">#373AC4</color>
+    <color name="green">#5DC458</color>
+    <color name="yellowc">#FEE301</color>
+    <color name="orangec">#FD8505</color>
+    <color name="black">#2D3249</color>
+    <color name="brown">#775530</color>
+    <color name="red">#FF4B4B</color>
+    <color name="apricot">#FBB882</color>
+    <color name="grey">#A0A9B7</color>
+    <color name="pink">#F552AE</color>
+    <color name="facebook">#3F6FCB</color>
+    <color name="colormain">#0a84fd</color>
+    <color name="google">#DA5142</color>
+    <color name="pintrest">#D73A3C</color>
+    <color name="wechat">#59B42C</color>
+    <color name="whatsapp">#3CB94E</color>
+    <color name="instagram">#467FAB</color>
+    <color name="twitter">#13BAF4</color>
+    <color name="text_hint">#AAAFC2</color>
+    <color name="fade_white">#A7CAFE</color>
+    <color name="fade_black">#6E779F</color>
+    <color name="like_color">#6785A2</color>
+    <color name="grey_dividr">#E5E4EE</color>
+    <color name="black_pd">#252D51</color>
+    <color name="black_grey">#F6F8FD</color>
+    <color name="from">#FFFFFF</color>
+    <color name="to">#000000</color>
+    <color name="light_grey">#f6f8fd</color>
+    <color name="fade_primary_color">#409ffd</color>
+    <color name="grey_button_color">#e6e8f0</color>
+    <color name="grey_background">#EAEDF2</color>
+    <color name="light_white">#FEFEFE</color>
+
+    <color name="black_overlay">#66000000</color>
+
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_dividr"
+    tools:context=".Activity.SelectItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:paddingRight="@dimen/dp10"
+        android:id="@+id/addpro_hdr"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_addrs"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:id="@+id/content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/white"
+            android:text="FILTER"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/addpro_hdr"
+        android:layout_above="@+id/applybottom"
+        android:layout_margin="@dimen/dp8">
+
+        <ListView
+            android:id="@+id/itemlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:scrollbars="none"
+            android:divider="@null"
+            android:padding="@dimen/dp20"></ListView>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/applybottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0 Selected"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp13"/>
+<LinearLayout
+    android:id="@+id/apply"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/nextarrow"
+        android:layout_width="@dimen/dp15"
+        android:layout_height="@dimen/dp15"
+        android:src="@drawable/drop_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp10"/>
+
+</LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

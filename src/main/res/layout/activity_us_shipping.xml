@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shop.shopaves.Activity.UsShippingActivity">
+
+    <include layout="@layout/app_header"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:layout_marginTop="@dimen/dp20"
+            android:textColor="@color/text_hint"
+            android:text="@string/shipping_type"/>
+        <RelativeLayout
+            android:id="@+id/tap_to_samecost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dp15"
+                android:singleLine="true"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/sp13"
+                android:layout_toLeftOf="@+id/i1"
+                android:textColorHint="@color/fade_black"
+                android:hint="Flat: same cost to all buyers"/>
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="@dimen/dp10"
+                android:layout_height="@dimen/dp10"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/drop_right"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+
+            <!--for services-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp11"
+                android:layout_marginTop="@dimen/dp20"
+                android:textColor="@color/text_hint"
+                android:text="@string/services"
+                android:id="@+id/textView8" />
+
+            <RelativeLayout
+                android:id="@+id/tap_to_category"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40">
+                <TextView
+                    android:id="@+id/selectcategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp13"
+                    android:layout_toLeftOf="@+id/i2"
+                    android:textColorHint="@color/fade_black"
+                    android:hint="@string/economy_shipping_from_outside_us"/>
+                <ImageView
+                    android:id="@+id/i2"
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/drop_right"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+            <!--for cost-->
+
+            <EditText
+                android:id="@+id/titlename"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/sp13"
+                android:layout_marginTop="@dimen/dp20"
+                android:textColorHint="@color/fade_black"
+                android:hint="@string/cost"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginBottom="@dimen/dp25"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free_shipping"
+                    android:textSize="@dimen/sp15"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:src="@drawable/unchecked"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

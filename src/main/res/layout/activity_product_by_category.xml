@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_background"
+    tools:context="com.shop.shopaves.Activity.ProductByCategoryActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <!--  <include layout="@layout/app_header"
+        android:id="@+id/head"/>-->
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:background="@color/colorPrimary"
+        android:id="@+id/head"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/white"
+            android:text="@string/title"/>
+
+        <LinearLayout
+            android:id="@+id/tabcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/back_addrss"
+            android:layout_toEndOf="@+id/back_addrss">
+
+            <TextView
+                android:id="@+id/topcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---   "
+                android:layout_marginLeft="@dimen/dp5"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp13" />
+
+            <ImageView
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/dropdowncat" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_addrss"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/wn_fashion_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="#FCE102"
+        app:paddingStart="@dimen/dp10"
+        app:paddingEnd="@dimen/dp10"
+        app:tabTextColor="@color/fade_white"
+        android:layout_below="@+id/head"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".43"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:src="@drawable/filter"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:textSize="@dimen/dp15"
+                android:textColor="@color/fade_black"
+                android:text="@string/filter"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/dp2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:background="@color/grey_dividr"/>
+
+        <LinearLayout
+            android:id="@+id/sortby"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".43"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:src="@drawable/sort"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:textSize="@dimen/dp15"
+                android:textColor="@color/fade_black"
+                android:text="@string/sort_by"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clickable="true"
+            android:id="@+id/chnge_style"
+            android:background="#F6F8FD"
+            android:tag="single"
+            android:layout_weight=".14">
+            <ImageView
+                android:id="@+id/listchangeicon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/grid"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_dividr"
+        android:scrollIndicators="none"
+        android:padding="@dimen/dp5"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        android:id="@+id/prouduct_recycleview">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <GridView
+        android:id="@+id/galleryview"
+        android:layout_width="fill_parent"
+        android:numColumns="2"
+        android:paddingRight="@dimen/dp5"
+        android:paddingLeft="@dimen/dp5"
+        android:scrollbars="none"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="3dp"
+        android:fitsSystemWindows="true"
+        android:paddingTop="@dimen/dp5"
+        ></GridView>
+
+<!--        android:verticalSpacing="1dp"
+-->
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/catlist"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp250"
+        android:layout_marginTop="@dimen/dp45"
+        android:layout_marginLeft="@dimen/dp30"
+        android:background="@drawable/border_view"
+        android:padding="@dimen/dp2"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/noproduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No product to view"
+        android:gravity="center"
+        android:textSize="@dimen/sp15"
+        android:visibility="gone"
+        android:textColor="@color/fade_black"/>
+</RelativeLayout>

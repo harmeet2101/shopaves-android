@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_collectiondetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_dividr"
+    tools:context=".Activity.CollectionDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/hdrrr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/colletion"
+            android:id="@+id/collection"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp15" />
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="EDIT"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:padding="10dp"-->
+
+        <!--/>-->
+        <TextView
+            android:id="@+id/editproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:text="EDIT"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/back_collectn"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hdrrr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp250"
+                        android:background="@android:color/white">
+
+                        <ImageView
+                            android:id="@+id/collection_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/collection_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8"
+                        android:text="-"
+                        android:textColor="@color/black_pd"
+                        android:textSize="@dimen/dp15" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp3"
+                        android:padding="@dimen/dp5">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/usrr"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/female"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_toRightOf="@+id/usrr"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/usr_nm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textColor="@color/black_pd"
+                                android:textSize="@dimen/dp15" />
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/text_hint"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="@color/grey_dividr" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp45"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp5">
+
+                        <LinearLayout
+                            android:id="@+id/like"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/dp20">
+
+                            <ImageView
+                                android:id="@+id/likeicon"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:src="@drawable/unlike" />
+
+                            <TextView
+                                android:id="@+id/likecount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:text="0"
+                                android:textColor="@color/fade_black"
+                                android:textSize="@dimen/sp15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/commentclick"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:src="@drawable/comment" />
+
+                            <TextView
+                                android:id="@+id/comment_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:text="0"
+                                android:textColor="@color/fade_black"
+                                android:textSize="@dimen/sp15" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_weight=".2"
+                            android:src="@drawable/share" />
+
+                        <ImageView
+                            android:id="@+id/collec"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_weight=".2"
+                            android:src="@drawable/add_collection" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                app:cardCornerRadius="@dimen/dp1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/hide_description_colle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_grey"
+                        android:padding="@dimen/dp10">
+
+                        <TextView
+                            android:id="@+id/collection_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/descriptin"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:textColor="@color/black_pd"
+                            android:textSize="@dimen/dp16" />
+
+                        <ImageView
+                            android:id="@+id/dropdesp"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/drop_down" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginBottom="@dimen/dp15"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:tag="1"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum pulvinar sem, sit amet sodales sapien euismod quis. Nullam venenatis porttitor nulla, at fringilla augue ultricies posuere. Phasellus finibus ultrices congue. Proin cursus aliquam metus. Integer viverra dictum justo, eget mattis massa."
+                        android:textColor="@color/fade_black"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/commentdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_grey"
+                        android:padding="@dimen/dp10">
+
+                        <TextView
+                            android:id="@+id/commentscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/comment_s"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:textColor="@color/black_pd"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/center_cmnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/be_the_first_person_to_comment_this_item"
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp15" />
+
+                        <ImageView
+                            android:id="@+id/dropcmnt"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/drop_down" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/comment_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp15">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/usercommentImg"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:src="@drawable/male"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp8"
+                                android:layout_toRightOf="@+id/usercommentImg"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/user_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anna Anica"
+                                    android:textColor="@color/black_pd"
+                                    android:textSize="@dimen/sp15" />
+
+                                <TextView
+                                    android:id="@+id/cmmnts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/sp14"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum pulvinar sem, sit amet sodales sapien euismod quis."
+                                    android:textColor="@color/grey" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="1hr ago"
+                                android:textColor="@color/grey" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/secondcommentdetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp15">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/reviewer23"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:src="@drawable/male"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp8"
+                                android:layout_toRightOf="@+id/reviewer23"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/nm22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anna Anica"
+                                    android:textColor="@color/black_pd"
+                                    android:textSize="@dimen/sp14" />
+
+                                <TextView
+                                    android:id="@+id/cmmn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum pulvinar sem, sit amet sodales sapien euismod quis."
+                                    android:textColor="@color/grey" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/de"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="1hr ago"
+                                android:textColor="@color/grey" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:background="@color/grey_dividr" />
+
+                        <RelativeLayout
+                            android:id="@+id/allcomment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:padding="@dimen/dp10"
+
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:text="@string/view_all_comments"
+                                android:textColor="@color/fade_black"
+                                android:textSize="@dimen/dp15" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dp5"
+                                android:src="@drawable/drop_right" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/items_in_this_set"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/seeallproduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/see_all"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dp15"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/collec_horin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"></LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginBottom="@dimen/dp8"
+                android:layout_marginLeft="@dimen/dp18"
+                android:text="@string/similar_collections"
+                android:textColor="@color/black_pd"
+                android:textSize="@dimen/sp16" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/collec_horin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"></LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/liveTryOut"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIVE TRY OUT"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

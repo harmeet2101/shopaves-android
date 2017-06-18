@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProductGridActivity">
+
+    <include layout="@layout/app_header"
+        android:id="@+id/header"/>
+
+    <GridView
+        android:id="@+id/galleryview"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/header"
+        android:numColumns="2"
+        android:layout_margin="@dimen/dp10"
+        android:horizontalSpacing="@dimen/dp10"
+        android:verticalSpacing="@dimen/dp10"
+        android:layout_height="wrap_content"></GridView>
+
+    <RelativeLayout
+        android:id="@+id/buyitemsview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/orange"
+        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/ttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount:"
+            android:textSize="@dimen/sp15"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/totalamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$123"
+            android:textSize="@dimen/sp15"
+            android:layout_toRightOf="@+id/ttext"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/buyitems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy Items"
+            android:textSize="@dimen/sp15"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <!--for no items found-->
+
+    <TextView
+        android:id="@+id/notfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Items found"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/sp15"
+        android:visibility="gone"
+        android:textColor="@color/black_pd"/>
+
+    <RelativeLayout
+        android:id="@+id/createproduct"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:background="@drawable/orange_circle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dp20"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:src="@drawable/createproduct"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

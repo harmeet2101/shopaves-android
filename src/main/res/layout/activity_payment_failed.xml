@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment_success_failed"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.shop.shopaves.Activity.PaymentSuccessFailed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp150"
+                android:id="@+id/img"
+                android:layout_centerInParent="true"
+                android:src="@drawable/payment_declined"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:id="@+id/pay"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img"
+                android:textColor="@color/white"
+                android:text="@string/payment_declined"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/tryagain"
+                android:layout_width="@dimen/dp250"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/orange_bttn"
+                android:textColor="@android:color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/try_again"
+                android:textSize="@dimen/sp13"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/save"
+                android:layout_marginTop="@dimen/dp15"
+                android:textColor="@color/fade_black"
+                android:gravity="center"
+                android:text="@string/try_again_with_different_payment_n_method"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

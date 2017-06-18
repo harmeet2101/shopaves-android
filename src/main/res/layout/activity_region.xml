@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shop.shopaves.Activity.RegionActivity">
+
+    <include layout="@layout/app_header"
+        android:id="@+id/header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp15"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/countryclick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        >
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="@dimen/dp10"
+            android:layout_height="@dimen/dp10"
+            android:src="@drawable/drop_down"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/country_large"
+            android:paddingRight="@dimen/dp10"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/ic"
+            android:textColorHint="#6E779F"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:layout_centerVertical="true"
+             />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#AAAFC2"
+       />
+
+    <!--for state-->
+    <RelativeLayout
+        android:id="@+id/stateclick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp15"
+        >
+
+        <ImageView
+            android:id="@+id/ic1"
+            android:layout_width="@dimen/dp10"
+            android:layout_height="@dimen/dp10"
+            android:src="@drawable/drop_down"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/state"
+            android:paddingRight="@dimen/dp10"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/ic1"
+            android:textColorHint="#6E779F"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#AAAFC2"
+        />
+
+    <!--for city-->
+    <RelativeLayout
+        android:id="@+id/cityclick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp15"
+        >
+
+        <ImageView
+            android:id="@+id/ic2"
+            android:layout_width="@dimen/dp10"
+            android:layout_height="@dimen/dp10"
+            android:src="@drawable/drop_down"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/city"
+            android:paddingRight="@dimen/dp10"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/ic2"
+            android:textColorHint="#6E779F"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#AAAFC2"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:text="@string/cancel"
+                android:textSize="@dimen/dp15"
+                android:textColor="@color/black_pd"
+                android:textAllCaps="false"
+                android:layout_margin="@dimen/dp15"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/custom_grey_round_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/cancel" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:text="@string/sav_e"
+                android:textSize="@dimen/dp15"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_margin="@dimen/dp15"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_bttn"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/save" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

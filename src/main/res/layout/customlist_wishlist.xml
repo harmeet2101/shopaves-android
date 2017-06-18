@@ -1,0 +1,72 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="@dimen/dp40"
+    android:layout_marginLeft="@dimen/dp15"
+    android:layout_marginRight="@dimen/dp10"
+    android:gravity="center_vertical"
+
+   >
+
+    <TextView
+        android:id="@+id/wishname"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="My Furnitures"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp16"/>
+
+    <TextView
+        android:id="@+id/itemsize"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="(4)"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/wishname"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp15"/>
+
+    <TextView
+        android:id="@+id/wishlistdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/Delete"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/itemsize"
+        android:layout_marginLeft="@dimen/dp10"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/seeall"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/seeall"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/sp16"/>
+
+</RelativeLayout>
+
+<HorizontalScrollView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="@dimen/dp10"
+android:scrollbars="none"
+    android:layout_marginLeft="@dimen/dp10"
+    >
+
+<LinearLayout
+    android:id="@+id/addproduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"></LinearLayout>
+
+</HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tagslayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/h_tx"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="@color/fade_white"
+        android:text="This information will help us to know your interests \n by which we can filter products that you see."/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:background="@drawable/white_background">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/dp10"
+            android:background="@null"
+            android:textSize="@dimen/dp15"
+            android:textColorHint="@color/txt_hint"
+            android:singleLine="true"
+            android:id="@+id/entertag"
+            android:layout_toLeftOf="@+id/vw"
+            android:hint="@string/enter_tags"/>
+        <View
+            android:layout_width="@dimen/dp2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:id="@+id/vw"
+            android:layout_toLeftOf="@+id/move"
+            android:background="#E0E1EA"/>
+
+        <ImageView
+            android:id="@+id/move"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:padding="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/blue_arrow"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <cn.lankton.flowlayout.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tag_flowlayout"
+            android:layout_margin="@dimen/dp11">
+
+
+        </cn.lankton.flowlayout.FlowLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shop.shopaves.Activity.AllReviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/write_a_review"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="@dimen/dp20"
+        android:textSize="@dimen/sp15"/>
+
+    <RatingBar
+        android:id="@+id/reviewrating"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:progressDrawable="@drawable/write_review_rating"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="5" />
+
+
+    <TextView
+        android:id="@+id/rateperformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp13"/>
+
+
+    <EditText
+        android:id="@+id/writereview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp150"
+        android:background="#f6f8fd"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="top"
+        android:hint="@string/write_your_review"
+        android:textSize="@dimen/sp13"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/fade_black"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:id="@+id/review"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange">
+        <TextView
+            android:id="@+id/prdbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:text="@string/submit"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

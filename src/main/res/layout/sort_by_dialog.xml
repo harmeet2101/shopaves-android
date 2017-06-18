@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sort_By"
+        android:textSize="@dimen/sp13"
+        android:textColor="@color/black_pd"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp10"/>
+
+
+    <RelativeLayout
+        android:id="@+id/popular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/pimg"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/popularity"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popularity"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/pimg"
+            android:textSize="@dimen/sp13"
+            android:textColor="@color/black_pd"
+            />
+        <ImageView
+            android:id="@+id/popularityicon"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selecton"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/pricelowtoheigh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/plh"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/lowtohigh"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_low_to_high"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/plh"
+            android:textColor="@color/black_pd"
+            android:textSize="@dimen/sp13"
+            />
+        <ImageView
+            android:id="@+id/lowtogighicon"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selecton"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/pricehightolow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/phl"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/hightolow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_high_to_low"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/phl"
+            android:textColor="@color/black_pd"
+            android:textSize="@dimen/sp13"
+            />
+        <ImageView
+            android:id="@+id/hightolowicon"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selecton"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/newestfirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/newst"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/newest"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newest_first"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/newst"
+            android:textColor="@color/black_pd"
+            android:textSize="@dimen/sp13"
+            />
+        <ImageView
+            android:id="@+id/newesticon"
+            android:layout_width="@dimen/dp18"
+            android:layout_height="@dimen/dp18"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selecton"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

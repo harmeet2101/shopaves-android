@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_location"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context=".Activity.SelectItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40">
+        <TextView
+            android:id="@+id/itemname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp25"
+            android:maxLines="2"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp16"
+            android:layout_toLeftOf="@+id/ic"
+            android:textColor="@color/black_pd"
+            android:text="United State"/>
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:id="@+id/drright"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/drop_right"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

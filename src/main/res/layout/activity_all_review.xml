@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#d9deea"
+    tools:context="com.shop.shopaves.Activity.AllReviewActivity">
+    <include layout="@layout/app_header"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10"
+        android:background="@android:color/white"
+        >
+
+        <TextView
+            android:id="@+id/ratef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:text="0/5"
+            android:textColor="@color/black_pd"
+            />
+
+        <RatingBar
+            android:id="@+id/allrating"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/off"
+            android:progressDrawable="@drawable/rating_custom"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp10"
+            android:rating="5" />
+
+
+        <TextView
+            android:id="@+id/reviewcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:text="0 Review"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@color/black_pd"
+            android:layout_gravity="bottom"
+            />
+    </LinearLayout>
+
+<!--for review shows-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        android:background="@android:color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                />
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/emptyreviewcheck"
+                android:tint="@color/fade_black"/>
+
+            <View
+                android:layout_width="@dimen/dp200"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="#77cc5a"/>
+
+            <TextView
+                android:id="@+id/fiveratecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0)"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+        </LinearLayout>
+
+        <!--for second progress-->
+ <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+     android:layout_marginTop="@dimen/dp5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                />
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/emptyreviewcheck"
+                android:tint="@color/fade_black"/>
+
+     <View
+         android:layout_width="@dimen/dp150"
+         android:layout_height="@dimen/dp15"
+         android:layout_gravity="center_vertical"
+         android:layout_marginLeft="@dimen/dp5"
+         android:background="#93ca59"/>
+
+            <TextView
+                android:id="@+id/fourratecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0)"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+        </LinearLayout>
+
+
+        <!--for third progress-->
+ <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+     android:layout_marginTop="@dimen/dp5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                />
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/emptyreviewcheck"
+                android:tint="@color/fade_black"/>
+
+     <View
+         android:layout_width="@dimen/dp80"
+         android:layout_height="@dimen/dp15"
+         android:layout_gravity="center_vertical"
+         android:layout_marginLeft="@dimen/dp5"
+         android:background="#bbcc5a"/>
+
+            <TextView
+                android:id="@+id/threeratecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0)"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+        </LinearLayout>
+
+
+        <!--for fourth progress-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                />
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/emptyreviewcheck"
+                android:tint="@color/fade_black"/>
+
+            <View
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="#efdc05"/>
+            <TextView
+                android:id="@+id/tworatecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0)"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+        </LinearLayout>
+
+
+        <!--for fourth progress-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                />
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp5"
+                android:src="@drawable/emptyreviewcheck"
+                android:tint="@color/fade_black"/>
+
+            <View
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp15"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="#ed7d05"/>
+
+            <TextView
+                android:id="@+id/oneratecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0)"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/fade_black"
+                android:layout_marginLeft="@dimen/dp10"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        app:cardElevation="@dimen/dp1"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_grey"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/writereview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/write_a_review"
+                android:textSize="@dimen/sp15"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:id="@+id/categoryname"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:padding="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:id="@+id/forall"
+                android:tag="0"
+                android:gravity="center"
+                android:background="@drawable/bttn_default"
+               >
+                <TextView
+                    android:id="@+id/foralltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp13"
+                    android:text="@string/all"/>
+
+            </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                >
+            <LinearLayout
+                android:id="@+id/forpositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:tag="0"
+                android:gravity="center"
+                android:background="@drawable/bttn_default"
+         >
+                <TextView
+                    android:id="@+id/forpositivetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp13"
+                    android:text="@string/positive"/>
+
+            </LinearLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                >
+            <LinearLayout
+                android:id="@+id/fornegative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:tag="0"
+                android:gravity="center"
+                android:background="@drawable/bttn_default">
+                <TextView
+                    android:id="@+id/fornegativetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp13"
+                    android:text="@string/negative"/>
+
+            </LinearLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                >
+            <LinearLayout
+                android:id="@+id/formostrecent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10"
+                android:tag="0"
+                android:gravity="center"
+                android:background="@drawable/bttn_default">
+                <TextView
+                    android:id="@+id/formostrecenttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp13"
+                    android:text="@string/most_recent"/>
+
+            </LinearLayout>
+</LinearLayout>
+        </LinearLayout>
+
+    <!--for ewview list-->
+
+    <ListView
+        android:id="@+id/reviewlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+       android:divider="@android:color/transparent"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/noreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="No Review"
+            android:textSize="@dimen/sp15"
+            android:gravity="center"
+            android:textColor="@color/fade_black"/>
+
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>

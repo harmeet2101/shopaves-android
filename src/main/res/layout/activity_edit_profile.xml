@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/editprofile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:paddingRight="@dimen/dp10"
+        android:id="@+id/addpro_hdr"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_collectn"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/white"
+            android:text="@string/profile"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/dp10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            app:civ_border_width="@dimen/dp3"
+            app:civ_border_color="@color/light_blue"
+            android:src="@drawable/female"
+            android:id="@+id/addphoto_imgvw"/>
+
+        <TextView
+            android:id="@+id/changephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_photo"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/sp15"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp20">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+            android:text="@string/first_name"/>
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/sp13"
+            android:text=""
+            android:textColorHint="@color/fade_black"
+           />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+           android:layout_marginTop="@dimen/dp15"
+            android:text="@string/last_name"/>
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/sp13"
+            android:text=""
+            android:textColorHint="@color/fade_black"
+           />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+                android:layout_marginTop="@dimen/dp15"
+            android:text="@string/email_address"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/sp13"
+            android:text="-"
+            android:textColorHint="@color/fade_black"
+           />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+                android:layout_marginTop="@dimen/dp15"
+            android:text="@string/user_name"/>
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/sp13"
+            android:text="-"
+            android:textColorHint="@color/fade_black"
+           />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/phone_number"/>
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:background="@null"
+            android:singleLine="true"
+            android:textSize="@dimen/sp13"
+            android:text="-"
+            android:inputType="number"
+            android:textColorHint="@color/fade_black"
+           />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp11"
+            android:textColor="@color/text_hint"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/date_of_birth"/>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <EditText
+             android:id="@+id/dateofbirth"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dp40"
+             android:background="@null"
+             android:singleLine="true"
+             android:textSize="@dimen/sp13"
+             android:text="-"
+             android:layout_toLeftOf="@+id/cal"
+             android:layout_marginRight="@dimen/dp10"
+             android:textColorHint="@color/fade_black"
+             />
+
+         <ImageView
+             android:id="@+id/cal"
+             android:layout_width="@dimen/dp20"
+             android:layout_height="@dimen/dp20"
+             android:src="@drawable/calendar"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"/>
+     </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_dividr"/>
+
+
+        <TextView
+            android:id="@+id/changepassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/dp15"
+            android:padding="@dimen/dp10"
+            android:text="@string/change_password" />
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:background="@drawable/orange_bttn"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp15"
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_marginBottom="@dimen/dp10"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

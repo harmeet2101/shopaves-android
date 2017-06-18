@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dealname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deals"
+        android:textColor="@color/black_pd"
+        android:textSize="@dimen/sp13"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp10"/>
+
+    <RelativeLayout
+        android:id="@+id/dealview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:background="@color/txt_hint"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/blurimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/dealbanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+           />
+    </RelativeLayout>
+
+
+</LinearLayout>

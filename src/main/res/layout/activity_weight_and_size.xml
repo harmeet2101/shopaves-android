@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wtdimensions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_dividr"
+    tools:context="com.shop.shopaves.Activity.WeightAndSizeActivity">
+
+    <include layout="@layout/app_header"/>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp10">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/black_pd"
+                android:text="@string/weight"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/titlename"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:background="@null"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/lb"
+        android:layout_marginTop="@dimen/dp15"
+        android:textSize="@dimen/sp13"
+        android:textColorHint="@color/text_hint"
+        android:hint="@string/weight_capital"
+        android:layout_marginRight="@dimen/dp10"
+        />
+
+                <TextView
+                    android:id="@+id/lb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lb"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:background="@color/grey_dividr"/>
+
+
+
+            <!--for package dimension-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:textColor="@color/black_pd"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/package_dimensions"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:id="@+id/len"
+                    android:layout_toLeftOf="@+id/inc"
+                    android:textSize="@dimen/sp13"
+                    android:textColorHint="@color/text_hint"
+                    android:hint="@string/length"
+                    android:layout_marginRight="@dimen/dp10"
+                    />
+
+                <TextView
+                    android:id="@+id/inc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inches"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+
+            <!--for width-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:id="@+id/wid"
+                    android:layout_toLeftOf="@+id/inc1"
+                    android:textSize="@dimen/sp13"
+                    android:textColorHint="@color/text_hint"
+                    android:hint="@string/width"
+                    android:layout_marginRight="@dimen/dp10"
+                    />
+
+                <TextView
+                    android:id="@+id/inc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inches"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+            <!--for width-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:id="@+id/heit"
+                    android:layout_toLeftOf="@+id/inc2"
+                    android:textSize="@dimen/sp13"
+                    android:textColorHint="@color/text_hint"
+                    android:hint="@string/height"
+                    android:layout_marginRight="@dimen/dp10"
+                    />
+
+                <TextView
+                    android:id="@+id/inc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inches"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+        </LinearLayout>
+
+
+        <!--for package dimension-->
+
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

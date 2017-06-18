@@ -1,0 +1,41 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dp10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:id="@+id/usercommentImg"
+        app:civ_border_width="0dp"
+        android:src="@drawable/male"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_toRightOf="@+id/usercommentImg"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_pd"
+            android:id="@+id/user_name"
+            android:textSize="@dimen/sp14"
+            android:text="Anna Anica"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fermentum pulvinar sem, sit amet sodales sapien euismod quis."
+            android:id="@+id/cmmnts"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/grey"
+        android:text="1hr ago"
+        android:id="@+id/day"/>
+</RelativeLayout>

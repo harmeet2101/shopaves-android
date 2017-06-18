@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/grey_dividr"
+    tools:context="com.shop.shopaves.Activity.GroupDetailsActivity">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:background="@color/colorPrimary"
+       >
+
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_addrss"
+            android:layout_marginLeft="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/white"
+            android:text="@string/title"/>
+
+        <TextView
+            android:id="@+id/toright"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:text=""/>
+
+<TextView
+    android:id="@+id/editgroup"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:text="@string/edit"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/sp13"
+    android:gravity="center_vertical"
+    android:layout_marginRight="@dimen/dp5"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/groupscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hdrr"
+                android:layout_margin="@dimen/dp5"
+                android:background="#fefeff"
+                app:cardElevation="@dimen/dp1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp5">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/groupimage"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp50"
+                            android:src="@drawable/female"
+                            app:civ_border_color="@color/black"
+                            app:civ_border_width="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/groupname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="groupname"
+                                android:textColor="@color/black_pd"
+                                android:textSize="@dimen/sp13" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="@string/items"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/itemcount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="28"
+                                    android:textColor="@color/black_pd"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/grey_dividr" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp5">
+
+                        <LinearLayout
+                            android:id="@+id/like"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/grouplikeicon"
+                                android:layout_width="@dimen/dp15"
+                                android:layout_height="@dimen/dp15"
+                                android:src="@drawable/unlike" />
+
+                            <TextView
+                                android:id="@+id/likecount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:text="0"
+                                android:textColor="@color/fade_black"
+                                android:textSize="@dimen/dp15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/commentclick"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:src="@drawable/comment" />
+
+                            <TextView
+                                android:id="@+id/comment_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:text="0"
+                                android:textColor="@color/fade_black"
+                                android:textSize="@dimen/dp15" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/groupshare"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_weight=".2"
+                            android:src="@drawable/share" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--for desp-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/hide_description_colle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_grey"
+                        android:padding="@dimen/dp10">
+
+                        <TextView
+                            android:id="@+id/collection_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/descriptin"
+                            android:textColor="@color/black_pd"
+                            android:textSize="@dimen/dp18" />
+
+                        <ImageView
+                            android:id="@+id/dropdesp"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/drop_down" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:tag="1"
+                        android:text=""
+                        android:textColor="@color/fade_black"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!--for review-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/commentdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_grey"
+                        android:padding="@dimen/dp10">
+
+                        <TextView
+                            android:id="@+id/commentscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/comment_s"
+                            android:textColor="@color/black_pd"
+                            android:textSize="@dimen/sp18" />
+
+                        <ImageView
+                            android:id="@+id/dropcmnt"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/drop_down" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"></LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="@color/grey_dividr" />
+
+                    <RelativeLayout
+                        android:id="@+id/allcomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp10"
+                        android:visibility="gone"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:text="@string/view_all_comments"
+                            android:textColor="@color/fade_black"
+                            android:textSize="@dimen/dp15" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/drop_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--for collection and items in the set -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/collection_and_items_in_this_set"
+                android:textColor="@color/black_pd"
+                android:textSize="@dimen/dp18" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/itemslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_dividr"
+                android:padding="@dimen/dp8"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <ListView
+                android:id="@+id/groupitemlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_dividr"
+                android:padding="@dimen/dp8"
+                android:scrollbars="none">
+
+            </ListView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

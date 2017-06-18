@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_payment_success_failed"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dp140"
+                android:layout_height="@dimen/dp140"
+                android:id="@+id/img"
+                android:layout_above="@+id/line"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/return_product"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/line"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp18"
+                android:id="@+id/pay"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/line"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/your_return_has_been_scheduled_nsucessfully"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pay"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/kindly_pack_your_product_back_for_nreturn_shipment"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/liness"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:id="@+id/shop"
+                android:layout_width="@dimen/dp250"
+                android:layout_height="@dimen/dp50"
+                android:layout_above="@+id/liness"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/orange_bttn"
+                android:textColor="@android:color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/continueshop"
+                android:textSize="@dimen/sp13"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp15"
+                android:layout_marginBottom="@dimen/dp30"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/fade_black"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/your_refund_will_be_processed_in_n8_working_days"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

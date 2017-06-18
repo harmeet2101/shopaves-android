@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shop.shopaves">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.shop.shopaves.googlemapsv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="app.me.locationalarm.permission.MAPS_RECEIVE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+
+    <application
+        android:name=".Util.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugar_example.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.shop.shopaves" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="44b6ae51be88e9a1b2675a488032a1c1eea60471" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <!--
+            <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="50f4ac01f0f625a862036394ead0a7da8c365375"
+            />
+        -->
+
+
+        <!--
+            <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDsXLOhOqYSwgncDlm_4fNcXeJtRRrFKYI" />
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD86RqpM0PFiN65U06yhM4K27eXzs8Hg-Q" />
+
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.AddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.SignUpDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <!--<activity-->
+            <!--android:name=".Activity.HomeActivity"-->
+            <!--android:label="@string/title_activity_navigation"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:windowSoftInputMode="stateHidden|adjustPan" />-->
+        <activity
+            android:name=".Activity.CreateCollection"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.CollectionDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.LiveTryOut"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.AddProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.ProductDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PublishProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.FollowersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.FollowingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.ProfileChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BrandDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AllReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WishListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ZoomImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProductGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProductByCategoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.AllCategoryBrandActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.ProductFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddToGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MySetsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GroupDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SelectItemActivity"
+            android:screenOrientation="portrait" />
+        <!--
+            <activity
+            android:name=".Activity.ShippingAddressActivity"
+            android:screenOrientation="portrait"
+        -->
+        <activity
+            android:name=".Activity.DeliveryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.ChangeShippingAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ManageSocialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SubCategoryActivity"
+            android:screenOrientation="portrait" />
+       <activity android:name=".Activity.ProductImageActivity"
+           android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activity.LanguageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PaymentLocalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WeightAndSizeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddPaypalEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PaypalTransactionHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UsShippingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddPaymentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AddToCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RegionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Terms_PolicyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FAQActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SalesAlertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ShippingAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Activity.PaymentSuccessFailed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CancellationConfirmedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CancelOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.TrackOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ReturnProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.RewardFAQ"
+            android:screenOrientation="portrait" />
+
+        <!-- Defining Services -->
+        <service android:name=".Notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Activity.PaymentFailedActivity" />
+        <activity android:name=".Activity.ReturnOrderConfirmationActivity" />
+        <activity
+            android:name=".Activity.CoupanActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_coupan"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".Activity.AvailableCouponsActivity" />
+        <activity
+            android:name=".Activity.TransactionDetailsActivity"
+            android:label="@string/title_activity_transaction_details"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activity.ShippingSelect" />
+        <activity android:name=".Dialog.CartSpecificationActivity" />
+        <activity android:name=".Activity.StripePaymentActivity" />
+        <activity android:name=".Dialog.CartSpecificationDialog" />
+        <activity android:name=".Activity.BraintreePaymentActivity"></activity>
+    </application>
+
+</manifest>

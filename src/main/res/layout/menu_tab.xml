@@ -1,0 +1,28 @@
+<LinearLayout android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp70"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="@dimen/dp15"
+    android:paddingBottom="@dimen/dp15"
+
+    >
+
+    <ImageView
+        android:id="@+id/tabIcon"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20"
+        android:src="@drawable/check"
+        />
+
+    <TextView
+        android:id="@+id/menuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:textColor="@color/fade_black"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp5"
+        android:textSize="@dimen/sp13"/>
+
+</LinearLayout>

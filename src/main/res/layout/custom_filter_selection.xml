@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_item_location"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context=".Activity.SelectItemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp25"
+            android:singleLine="true"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black_pd"
+            android:text="United State"/>
+
+        <TextView
+            android:id="@+id/selectionnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text=""
+            android:textSize="@dimen/sp13"
+            android:paddingTop="@dimen/dp10"
+            android:layout_below="@+id/itemname"/>
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:id="@+id/drright"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/drop_right"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/isoffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background">
+
+    <include layout="@layout/app_header"
+        android:id="@+id/top"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp7"
+        android:layout_margin="@dimen/dp7">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp25"
+            android:text="@string/address_s"
+            android:id="@+id/adrs"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp25"
+            android:text=""
+            android:id="@+id/numberofAddress"
+            android:layout_toRightOf="@+id/adrs"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp25"
+            android:text="@string/add_more"
+            android:id="@+id/add_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/sp15" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp7"
+        android:id="@+id/address_recyclevw">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>

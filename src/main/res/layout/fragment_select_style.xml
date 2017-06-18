@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/select_style_main"
+    android:background="@color/colorPrimary"
+    tools:context="com.shop.shopaves.Fragments.SelectStyle">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:textSize="@dimen/dp13"
+        android:textColor="@color/fade_white"
+        android:text="This information will help us to know styles \n you are like to wear or are interested in."/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:background="@drawable/white_background">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textSize="@dimen/dp15"
+            android:paddingRight="@dimen/dp10"
+            android:textColorHint="@color/txt_hint"
+            android:singleLine="true"
+            android:id="@+id/enter_sytles"
+            android:layout_toLeftOf="@+id/vw"
+            android:hint="@string/enter_styles"/>
+        <View
+            android:layout_width="@dimen/dp2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:id="@+id/vw"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_toLeftOf="@+id/move"
+            android:background="#E0E1EA"/>
+
+        <ImageView
+            android:id="@+id/move"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dp32"
+            android:layout_height="@dimen/dp32"
+            android:padding="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/blue_arrow"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <cn.lankton.flowlayout.FlowLayout
+            android:id="@+id/style_flowlayout"
+            android:layout_margin="@dimen/dp11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </cn.lankton.flowlayout.FlowLayout>
+    </ScrollView>
+
+
+    </LinearLayout>

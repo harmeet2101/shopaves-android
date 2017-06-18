@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_cancel_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_dividr"
+    tools:context="com.shop.shopaves.Activity.CancelOrderActivity">
+
+    <include layout="@layout/app_header"
+        android:id="@+id/head"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp10"
+        android:layout_below="@+id/head"
+        android:layout_above="@+id/third_top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/are_you_sure_you_would_like_to_cancel_this_order"
+            android:textColor="@color/black_pd"
+            android:textSize="@dimen/sp15" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/prdimg"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/product_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp5"
+                    android:scaleType="centerCrop"
+                  />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_toRightOf="@+id/prdimg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Product Name"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:text="$ 00.00"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/dp15" />
+
+                <LinearLayout
+                    android:id="@+id/off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cross_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity:"
+                        android:layout_weight="1"
+                        android:textColor="@color/fade_black"
+                        android:textSize="@dimen/sp13" />
+
+                    <TextView
+                        android:id="@+id/quant"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/del_by"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Delivered by:"
+                        android:textColor="@color/fade_black"
+                        android:textSize="@dimen/sp13" />
+
+                    <TextView
+                        android:id="@+id/dating"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="bottom"
+                        android:text="8 Oct, 2016"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a_cancellation_fee_will_be_applied_depends_on_the_location_and_cost_of_the_product"
+            android:textColor="@color/fade_black"
+            android:layout_marginTop="@dimen/dp15"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/reasontext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/reason_for_cancellation"
+            android:textColor="@color/black_pd"
+            android:textSize="@dimen/sp15" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/resclick"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:id="@+id/selectreason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_reason"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/sp15"/>
+            </RelativeLayout>
+
+           <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45">
+
+                <TextView
+                    android:id="@+id/reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="Reason?"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_toLeftOf="@+id/arw"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:id="@+id/arw"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/drop_icon"/>
+
+
+            </RelativeLayout>-->
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="#AAAFC2"
+                android:layout_below="@+id/resclick"
+                />
+
+                <EditText
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/comment_s"
+                    android:paddingRight="@dimen/dp15"
+                    android:gravity="top"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:singleLine="true"
+                    android:layout_below="@+id/v1"
+                    android:textColorHint="@color/fade_black"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="#AAAFC2"
+                android:layout_below="@+id/comment"
+                />
+            <ListView
+                android:id="@+id/reasonlist"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150"
+                android:layout_below="@+id/v1"
+                android:background="@android:color/white"
+                android:visibility="gone"></ListView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/confirmCancel"
+        app:cardBackgroundColor="@color/orange"
+        android:layout_height="@dimen/dp50"
+        app:cardElevation="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/changeaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/actiontext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/confirm_cancellation"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp16" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shop.shopaves.Activity.AddPaymentDetailActivity">
+
+    <include layout="@layout/app_header"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:src="@drawable/paypalicon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paypal"
+                    android:textColor="@color/black_pd"
+                    android:layout_marginLeft="@dimen/dp10"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/paypalemail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:singleLine="true"
+                android:textSize="@dimen/sp13"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/your_paypal_email_address"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginBottom="@dimen/dp25"
+                android:textColor="@color/black_pd"
+                />
+
+<!--for check-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:src="@drawable/bankcheck"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_check"
+                    android:textColor="@color/black_pd"
+                    android:layout_marginLeft="@dimen/dp10"/>
+
+            </LinearLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Shipping from bank cheque"
+    android:layout_marginTop="@dimen/dp5"
+    android:textSize="@dimen/sp13"
+    android:textColor="@color/grey"/>
+
+            <EditText
+                android:id="@+id/bankname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/sp13"
+                android:layout_marginTop="@dimen/dp20"
+                android:textColorHint="@color/fade_black"
+                android:hint="@string/your_bank_name"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/sp13"
+                android:layout_marginTop="@dimen/dp20"
+                android:textColorHint="@color/fade_black"
+                android:hint="@string/check_receive_address"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2"
+                android:background="@color/grey_dividr"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/orange_bttn"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/dp25"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/save_payment_details"
+                android:textSize="@dimen/sp13"
+                />
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+</LinearLayout>

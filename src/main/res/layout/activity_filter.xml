@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+    <include layout="@layout/app_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+      >
+    <RelativeLayout
+        android:id="@+id/sploffr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+        <TextView
+            android:id="@+id/itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp25"
+            android:singleLine="true"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black_pd"
+            android:text="@string/special_offer"/>
+
+        <TextView
+            android:id="@+id/selectionnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text=""
+            android:textSize="@dimen/sp13"
+            android:layout_below="@+id/itemname"/>
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:id="@+id/drright"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/drop_right"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/isspecialoffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+
+   <!--for conditions-->
+
+    <RelativeLayout
+        android:id="@+id/conditionclick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id="@+id/conditiontext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp25"
+            android:singleLine="true"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black_pd"
+            android:text="Condition"/>
+
+            <TextView
+                android:id="@+id/conditionselection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dp25"
+            android:singleLine="true"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/dp5"
+            android:text=""/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:padding="@dimen/dp5"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/drop_right"
+            />
+
+    </RelativeLayout>
+        <!--for brands-->
+        <RelativeLayout
+            android:id="@+id/brandclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/brandtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/Brand"
+                    android:textColor="@color/black_pd"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/brandselections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text=""/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:padding="@dimen/dp5"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/drop_right"
+                />
+
+        </RelativeLayout>
+    <ListView
+        android:id="@+id/specificationlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@android:color/white"></ListView>
+
+</LinearLayout>
+
+
+</LinearLayout>
+        <RelativeLayout
+            android:id="@+id/applybottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/orange"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0 Selected"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp13"/>
+            <LinearLayout
+                android:id="@+id/apply"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apply_c"
+                    android:textColor="@android:color/white"/>
+
+                <ImageView
+                    android:id="@+id/nextarrow"
+                    android:layout_width="@dimen/dp15"
+                    android:layout_height="@dimen/dp15"
+                    android:src="@drawable/drop_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp10"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_categories"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+ >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp10"
+        android:id="@+id/hc"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/titlesub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/white"
+            android:text="@string/categories"/>
+        <ImageView
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:id="@+id/back_categories"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/back_arrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_below="@+id/hc"
+        android:id="@+id/search_catgries"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/white_back"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15">
+        <ImageView
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_centerVertical="true"
+            android:id="@+id/search"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/search"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/fade_black"
+            android:paddingRight="@dimen/dp10"
+            android:textSize="@dimen/dp15"
+            android:hint="Search"
+            android:layout_toRightOf="@+id/search"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp25"
+        android:padding="@dimen/dp5"
+        android:id="@+id/categories_recyclevw"
+        android:background="@color/grey_dividr"
+        android:layout_below="@+id/search_catgries">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.shop.shopaves.Activity.ChangeShippingAddressActivity">
+
+    <include layout="@layout/app_header"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp20">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/name"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"
+                />
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/phone_number"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"
+                   />
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/address_c"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"
+                    android:id="@+id/addressfirst" />
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+                <EditText
+                    android:id="@+id/addresssecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/address_line_2"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"/>
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/city"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"
+                    android:id="@+id/city" />
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20">
+
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@null"
+                    android:hint="@string/state"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="@dimen/dp10"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/drop_icon"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                app:theme="@style/TextLabel"
+                android:textColorHint="@color/text_hint">
+                <EditText
+                    android:id="@+id/zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/zip_code"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"/>
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:textColorHint="@color/text_hint"
+                app:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/country_large"
+                    android:paddingRight="@dimen/dp15"
+                    android:singleLine="true"
+                    android:textColor="@color/fade_black"
+                    android:textSize="@dimen/sp14"
+                    android:id="@+id/country" />
+            </android.support.design.widget.TextInputLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/text_hint"
+                android:layout_marginTop="@dimen/dp5"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dp10">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/addrss_next"
+                        android:layout_width="@dimen/dp120"
+                        android:layout_height="@dimen/dp35"
+                        android:background="@drawable/custom_grey_round_button"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_pd"
+                        android:textSize="@dimen/sp15"
+                    />
+
+
+                </RelativeLayout>
+                 <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                     android:gravity="center">
+
+                     <Button
+                         android:layout_width="@dimen/dp120"
+                         android:layout_height="@dimen/dp35"
+                         android:background="@drawable/orange_bttn"
+                         android:text="@string/sav_e"
+                         android:textAllCaps="false"
+                         android:textColor="@android:color/white"
+                         android:textSize="@dimen/sp15"
+                         />
+
+                 </RelativeLayout>
+
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

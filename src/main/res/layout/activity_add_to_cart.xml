@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shop.shopaves.Activity.AddToCartActivity">
+
+    <include
+        android:id="@+id/incl"
+        layout="@layout/app_header"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:id="@+id/cartt"
+        android:layout_below="@+id/inc1"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cartlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textOfCart"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:text="Your cart is empty"
+            android:layout_marginTop="@dimen/dp5"
+            android:textColor="@color/grey"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:id="@+id/bott"
+        android:background="@color/btnbg"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/totaltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Total: "
+            android:textSize="16dp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 0.00"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/totaltext"
+            android:layout_marginLeft="@dimen/dp5"
+            android:textColor="@android:color/white"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/checkout"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout"
+                android:layout_toLeftOf="@+id/arr"
+                android:layout_marginRight="@dimen/dp5"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                />
+
+            <ImageView
+                android:id="@+id/arr"
+                android:layout_width="@dimen/dp10"
+                android:layout_height="@dimen/dp15"
+                android:src="@drawable/next"
+                android:layout_alignParentRight="true"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

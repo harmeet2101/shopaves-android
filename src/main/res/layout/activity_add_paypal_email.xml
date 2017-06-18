@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paypalemailview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shop.shopaves.Activity.AddPaypalEmailActivity">
+
+    <include layout="@layout/app_header"/>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+        <ImageView
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:src="@drawable/paypallogo"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_gravity="center_horizontal"/>
+
+            <EditText
+                android:id="@+id/paypalemail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/sp13"
+                android:hint="@string/your_paypal_email_address"
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/grey_dividr"/>
+
+
+            <Button
+                android:id="@+id/saveemail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/orange_bttn"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/dp25"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="@string/save_paypal_email"
+                android:textSize="@dimen/sp13"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
